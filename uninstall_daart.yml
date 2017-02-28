@@ -1,0 +1,10 @@
+---
+- hosts: karst
+  remote_user: scmcclar
+  vars_files:
+  - vars/daart
+  tasks:
+  - name: Un-Install DAART ("{{ daart_path }}")
+    command: sh "{{ daart_path }}"/scripts/uninstall.sh
+  - name: Remove DAART Directory ("{{ daart_path }}")
+    file: state=absent path="{{ daart_path }}"

@@ -1,0 +1,5 @@
+---
+# Variables here are for daart
+
+daart_path: ~/DAART
+node_webkit_path: /tmp

@@ -1,0 +1,13 @@
+---
+- hosts: kd-beta
+  remote_user: scmcclar
+  vars_files:
+  - vars/daart
+  tasks:
+  - name: Download Node Webkit Tarball
+    get_url: url=https://dl.nwjs.io/v0.16.1/nwjs-v0.16.1-linux-x64.tar.gz dest=/tmp
+  - file: path="{{ node_webkit_path }}" state=directory mode=u=rwx,g=rwx,o=rwx
+  - name: Unpack Node Webkit Tarball
+    unarchive: src=/tmp/nwjs-v0.16.1-linux-x64.tar.gz dest="{{ node_webkit_path }}" remote_src=True mode=u=rwx,g=rwx,o=rwx
+  - name: Remove Node-Webkit Tarball
+    file: state=absent path=/tmp/nwjs-v0.16.1-linux-x64.tar.gz

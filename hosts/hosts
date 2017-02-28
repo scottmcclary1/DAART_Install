@@ -1,0 +1,29 @@
+[local]
+localhost ansible_connection=local ansible_user=scottmcclary 
+
+[remote]
+
+karst.uits.iu.edu ansible_user=scmcclar
+bigred2.uits.iu.edu ansible_user=scmcclar
+
+[karst]
+
+karst.uits.iu.edu ansible_user=scmcclar
+
+[kd-beta]
+
+i1.karst.uits.iu.edu ansible_user=scmcclar
+i2.karst.uits.iu.edu ansible_user=scmcclar
+i3.karst.uits.iu.edu ansible_user=scmcclar
+i4.karst.uits.iu.edu ansible_user=scmcclar
+i5.karst.uits.iu.edu ansible_user=scmcclar
+i6.karst.uits.iu.edu ansible_user=scmcclar
+i7.karst.uits.iu.edu ansible_user=scmcclar
+hm008.karst.uits.iu.edu ansible_user=scmcclar
+hm009.karst.uits.iu.edu ansible_user=scmcclar
+hm011.karst.uits.iu.edu ansible_user=scmcclar
+hm012.karst.uits.iu.edu ansible_user=scmcclar
+hm013.karst.uits.iu.edu ansible_user=scmcclar
+hm014.karst.uits.iu.edu ansible_user=scmcclar
+hm015.karst.uits.iu.edu ansible_user=scmcclar
+hm016.karst.uits.iu.edu ansible_user=scmcclar

@@ -1,0 +1,10 @@
+---
+- hosts: karst
+  remote_user: scmcclar
+  vars_files:
+  - vars/daart
+  tasks:
+  - name: Fetch DAART ("{{ daart_path }}")
+    git: repo=git@github.com:IUSCA/DAART.git dest="{{ daart_path }}" accept_hostkey=yes version=HEAD
+  - name: Install DAART ("{{ daart_path }}")
+    command: sh "{{ daart_path }}"/scripts/setup.sh
