@@ -2,7 +2,7 @@
 
 Guide to install DAART and its software dependencies (Node-Webkit) on Karst Desktop Beta. 
 
-## Configure Environment on Karst 
+## Configure Environment on Karst  (execute only once) 
 
 Load Python Module
 ```
@@ -25,8 +25,6 @@ pip install ansible
 ```
 
 ## Install on Karst 
-
-Using the software after its been installed
 
 Activate Virtual Environment
 ```
