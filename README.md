@@ -24,6 +24,11 @@ Install Ansible
 pip install ansible
 ```
 
+Leave Virtual Environment
+```
+deactivate
+```
+
 ## Install on Karst 
 
 Activate Virtual Environment
