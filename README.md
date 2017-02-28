@@ -79,12 +79,12 @@ ansible-playbook -i hosts/hosts install_daart.yml
 ```
 
 ## Uninstall Node-Webkit and DAART
-Install Node-Webkit
+Uninstall Node-Webkit
 ```
 ansible-playbook -i hosts/hosts uninstall_node_webkit.yml
 ```
 
-Install DAART
+Uninstall DAART
 ```
 ansible-playbook -i hosts/hosts uninstall_daart.yml
 ```
