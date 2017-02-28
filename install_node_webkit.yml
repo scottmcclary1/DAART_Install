@@ -4,10 +4,9 @@
   vars_files:
   - vars/daart
   tasks:
-  - name: Download Node Webkit Tarball
+  - name: Download Node-Webkit Tarball to /tmp/nwjs-v0.16.1-linux-x64.tar.gz
     get_url: url=https://dl.nwjs.io/v0.16.1/nwjs-v0.16.1-linux-x64.tar.gz dest=/tmp
-  - file: path="{{ node_webkit_path }}" state=directory mode=u=rwx,g=rwx,o=rwx
-  - name: Unpack Node Webkit Tarball
+  - name: Unpack Node-Webkit Tarball to {{ node_webkit_path }}/nwjs-v0.16.1-linux-x64
     unarchive: src=/tmp/nwjs-v0.16.1-linux-x64.tar.gz dest="{{ node_webkit_path }}" remote_src=True mode=u=rwx,g=rwx,o=rwx
-  - name: Remove Node-Webkit Tarball
+  - name: Remove Node-Webkit Tarball from /tmp/nwjs-v0.16.1-linux-x64.tar.gz
     file: state=absent path=/tmp/nwjs-v0.16.1-linux-x64.tar.gz

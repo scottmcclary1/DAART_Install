@@ -4,7 +4,7 @@
   vars_files:
   - vars/daart
   tasks:
-  - name: Fetch DAART ("{{ daart_path }}")
+  - name: Git Clone DAART to {{ daart_path }}
     git: repo=git@github.com:IUSCA/DAART.git dest="{{ daart_path }}" accept_hostkey=yes version=HEAD
-  - name: Install DAART ("{{ daart_path }}")
+  - name: Run DAART setup scripts in {{ daart_path }}
     command: sh "{{ daart_path }}"/scripts/setup.sh

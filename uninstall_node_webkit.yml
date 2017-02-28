@@ -4,5 +4,5 @@
   vars_files:
   - vars/daart
   tasks:
-  - name: Remove Node Webkit Directory ("{{ node_webkit_path }}"/nwjs-v0.16.1-linux-x64)
+  - name: Remove Node-Webkit source code from {{ node_webkit_path }}/nwjs-v0.16.1-linux-x64
     file: state=absent path="{{ node_webkit_path }}"/nwjs-v0.16.1-linux-x64

@@ -1,11 +1,3 @@
-[local]
-localhost ansible_connection=local
-
-[remote]
-
-karst.uits.iu.edu
-bigred2.uits.iu.edu 
-
 [karst]
 
 karst.uits.iu.edu

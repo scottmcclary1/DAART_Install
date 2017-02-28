@@ -1,14 +1,8 @@
 # DAART Installation
 
-Guide to install DAART and its dependencies.
+Guide to install DAART and its software dependencies (Node-Webkit) on Karst Desktop Beta. 
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### First time only 
-
-What things you need to install the software and how to install them
+## Configure Environemnt on Karst 
 
 Load Python Module
 ```
@@ -30,7 +24,7 @@ Install Ansible
 pip install ansible
 ```
 
-### Every other time
+## Install on Karst 
 
 Using the software after its been installed
 
@@ -43,38 +37,30 @@ Ensure hosts file is accurate
 ```
 cat hosts/hosts 
 
-[local]
-localhost ansible_connection=local ansible_user=scmcclar
-
-[remote]
-
-karst.uits.iu.edu ansible_user=scmcclar
-bigred2.uits.iu.edu ansible_user=scmcclar
-
 [karst]
 
-karst.uits.iu.edu ansible_user=scmcclar
+karst.uits.iu.edu 
 
 [kd-beta]
 
-i1.karst.uits.iu.edu ansible_user=scmcclar
-i2.karst.uits.iu.edu ansible_user=scmcclar
-i3.karst.uits.iu.edu ansible_user=scmcclar
-i4.karst.uits.iu.edu ansible_user=scmcclar
-i5.karst.uits.iu.edu ansible_user=scmcclar
-i6.karst.uits.iu.edu ansible_user=scmcclar
-i7.karst.uits.iu.edu ansible_user=scmcclar
-hm008.karst.uits.iu.edu ansible_user=scmcclar
-hm009.karst.uits.iu.edu ansible_user=scmcclar
-hm011.karst.uits.iu.edu ansible_user=scmcclar
-hm012.karst.uits.iu.edu ansible_user=scmcclar
-hm013.karst.uits.iu.edu ansible_user=scmcclar
-hm014.karst.uits.iu.edu ansible_user=scmcclar
-hm015.karst.uits.iu.edu ansible_user=scmcclar
-hm016.karst.uits.iu.edu ansible_user=scmcclar
+i1.karst.uits.iu.edu 
+i2.karst.uits.iu.edu 
+i3.karst.uits.iu.edu 
+i4.karst.uits.iu.edu 
+i5.karst.uits.iu.edu 
+i6.karst.uits.iu.edu 
+i7.karst.uits.iu.edu 
+hm008.karst.uits.iu.edu 
+hm009.karst.uits.iu.edu 
+hm011.karst.uits.iu.edu 
+hm012.karst.uits.iu.edu 
+hm013.karst.uits.iu.edu 
+hm014.karst.uits.iu.edu 
+hm015.karst.uits.iu.edu 
+hm016.karst.uits.iu.edu 
 ```
 
-Make sure you are aware of where Node-Webkit and DAART will be installed
+Ensure vars are accurate for installation
 ```
 cat vars/daart
 ---
@@ -94,7 +80,7 @@ Install DAART
 ansible-playbook -i hosts/hosts install_daart.yml
 ```
 
-### Uninstall Node-Webkit and DAART (rarely needed)
+## Uninstall Node-Webkit and DAART
 Install Node-Webkit
 ```
 ansible-playbook -i hosts/hosts uninstall_node_webkit.yml

@@ -4,7 +4,7 @@
   vars_files:
   - vars/daart
   tasks:
-  - name: Un-Install DAART ("{{ daart_path }}")
+  - name: Run DAART uninstall scripts in {{ daart_path }}
     command: sh "{{ daart_path }}"/scripts/uninstall.sh
-  - name: Remove DAART Directory ("{{ daart_path }}")
+  - name: Remove DAART source code {{ daart_path }}
     file: state=absent path="{{ daart_path }}"
