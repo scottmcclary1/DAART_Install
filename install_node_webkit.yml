@@ -1,6 +1,6 @@
 ---
 - hosts: kd-beta
-  remote_user: scmcclar
+  remote_user: "{{ user }}"
   vars_files:
   - vars/daart
   tasks:

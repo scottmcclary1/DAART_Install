@@ -58,12 +58,13 @@ hm015.karst.uits.iu.edu
 hm016.karst.uits.iu.edu 
 ```
 
-Ensure vars are accurate for installation
+Ensure vars are accurate for installation (edit user)
 ```
 cat vars/daart
 ---
-# Variables here are for daart
+# Global variables
 
+user: scmcclar
 daart_path: ~/DAART
 node_webkit_path: /tmp
 ```

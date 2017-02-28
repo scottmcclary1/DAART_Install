@@ -1,5 +1,6 @@
 ---
-# Variables here are for daart
+# Global variables
 
+user: scmcclar
 daart_path: ~/DAART
 node_webkit_path: /tmp

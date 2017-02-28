@@ -1,6 +1,6 @@
 ---
 - hosts: karst
-  remote_user: scmcclar
+  remote_user: "{{ user }}"
   vars_files:
   - vars/daart
   tasks:
